@@ -11,3 +11,4 @@ todo:
 + systemd
 + grep
 + find
++ tmux
