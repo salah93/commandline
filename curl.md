@@ -46,3 +46,8 @@ curl --user-agent "Mozilla/4.73 [en] (X11; U; Linux 2.2.15 i686)" [URL]
 ### POST
 + upload file to server
 + test difference between --form, --data, and --data-urlencode
+
+## write output to file
+```
+curl -o example.html 'https://example.com'
+```
