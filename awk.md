@@ -25,10 +25,10 @@ chicken
 ```
 
 ## pattern
-awk '/pattern/ {actions }'
+`awk '/pattern/ {actions }'`
 
 ## universal pattern
-awk ' {actions}'
+`awk ' {actions}'`
 
 ## begin/end
 + you can do some actions before any line is read or after all lines are read
