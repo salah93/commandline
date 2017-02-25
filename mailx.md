@@ -1,6 +1,6 @@
 ## mailx
 
-## step1: use mozilla firefox's certificates
+## step1: create certificates
 
 ## step2: create password for your app to use via gmail
 
@@ -8,15 +8,15 @@
 
 ```
 account gmail {
-set smtp-use-starttls
-set ssl-verify=ignore
-set smtp-auth=login
-set smtp=smtp://smtp.gmail.com:587
-set from="salah.ahmed.hslc@gmail.com(salah)"
-set smtp-auth-user=**youremail**
-set smtp-auth-password=**yourpassword**
-set ssl-verify=ignore
-set nss-config-dir=/path/to/certs
+    set smtp-use-starttls
+    set ssl-verify=ignore
+    set smtp-auth=login
+    set smtp=smtp://smtp.gmail.com:587
+    set smtp-auth-user=**youremail**
+    set smtp-auth-password=**yourpassword**
+    set from="**youremail**(**name**)"
+    set ssl-verify=ignore
+    set nss-config-dir=/path/to/certs
 }
 ```
 
