@@ -1,7 +1,7 @@
 name=$1
 shift
 tags=
-target=~/Projects/salah93.github.io/_posts/commandline/`ds`-$name.md
+target=~/Projects/salah93.github.io/_posts/commandline/`ds`-$name
 cat <<EOF > $target 
 ---
 layout: post
