@@ -1,7 +1,9 @@
 
-# Docker - what I've learned 
+# Docker - what I've learned
 
-Recently, I've been focusing a part of my time to learning docker, a technology of growing importance in the software engineering sphere. I'm also studying for the GRE, and so will include 10 new words I've learned in this blog post :). 
+[source](https://prakhar.me/docker-curriculum/)
+
+Recently, I've been focusing a part of my time to learning docker, a technology of growing importance in the software engineering sphere. I'm also studying for the GRE, and so will include 10 new words I've learned in this blog post :).
 
 
 
@@ -23,7 +25,7 @@ A dockerfile contains a series of commands you give docker to create your image.
 + ADD
 + EXPOSE
 
-Once you have a dockerfile in a dedicated directory, then if you are in said directory you can build the image with the command 
+Once you have a dockerfile in a dedicated directory, then if you are in said directory you can build the image with the command
 ```bash
 $ sudo docker build .
 ```
@@ -84,7 +86,7 @@ example:
 
     ADD ./requirements.txt /tmp/requirements.txt
     RUN ["pip", "install", "-r" , "/tmp/requirements.txt"]
-   
+
 
 ### EXPOSE
 this opens a tcp port on the container's firewall. This does not make port accessible to host on runtime, for that you would have to add `-p` or `-P` flag at runtime, described below
@@ -95,13 +97,13 @@ example:
 
 ## Pulling docker images from dockerhub
 ```
-sudo docker pull busybox
+sudo docker pull fedora
 ```
 
 ## Running a terminal
 
 ```
-sudo docker run -it ubuntu
+sudo docker run -it ubuntu bash
 ```
 the `-it` argument runs the terminal from the ubuntu image, which if not already pulled will first pull the image
 
@@ -116,7 +118,7 @@ the `-it` argument runs the terminal from the ubuntu image, which if not already
     - this gives the container a name
 - --rm
     - this removes the container once it exits, cleaning up for you
-    
+
 ### Ports
 to check the mapped ports of a container
 ```
@@ -133,7 +135,7 @@ sudo docker port $CONTAINERNAME
 - the third command lists all containers, including ones that have exited
 - the fourth command lists only the ids
 
-## Removing 
+## Removing
 ```
 sudo docker stop ${CONTAINERID}
 sudo docker rm $CONTAINERID
@@ -253,7 +255,7 @@ ADD app.py app/
 ADD templates app/templates
 
 EXPOSE 8000
-CMD python app/app.py                        
+CMD python app/app.py
 EOF
 sudo docker build -t flask .
 sudo docker run --name myapp --rm -p 4444:8000 flask
