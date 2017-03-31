@@ -1,5 +1,7 @@
 ## mailx
 
+[source](https://coderwall.com/p/ez1x2w/send-mail-like-a-boss)
+
 ## step1: create certificates
 ```
 mkdir ~/.certs
